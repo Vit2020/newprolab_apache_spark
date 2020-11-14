@@ -1,0 +1,18 @@
+/*
+	Подключение к мастеру
+*/
+ ssh -i ~/newprolab.pem vitaly.volkov@bd-master.newprolab.com
+
+
+/*
+	Создание тунеля
+*/
+-- Если всё успешно, то терминал будет как-будто "висеть" и показывать пустой промпт.
+ssh -i ~/newprolab.pem vitaly.volkov@bd-node1.newprolab.com -D localhost:1080 -N
+
+
+/*
+	Подключение к юпитеру
+*/
+-- Из браузера, где установлен тунель
+https://bd-master2.newprolab.com/
